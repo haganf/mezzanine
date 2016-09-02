@@ -456,7 +456,7 @@ def editable_loader(context):
                                         context.get("page", None))
         template_vars["accounts_logout_url"] = context.get(
             "accounts_logout_url", None)
-        template_vars["toolbar"] = t.render(template_vars)
+        template_vars["toolbar"] = t.render(Context(template_vars))
         template_vars["richtext_media"] = RichTextField().formfield(
             ).widget.media
     return template_vars

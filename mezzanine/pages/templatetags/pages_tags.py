@@ -131,8 +131,7 @@ def page_menu(context, token):
             context["page_branch_in_footer"] = True
 
     t = get_template(template_name)
-    return t.render(context)
-    # return t.render(Context(context))
+    return t.render(Context(context))
 
 
 @register.as_tag
